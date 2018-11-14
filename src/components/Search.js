@@ -37,14 +37,17 @@ class Search extends Component {
   }
 
   search = (query) => {
-    if (query) {
-      BooksAPI.search(query, 15).then((books) => {
-        if (books.length > 0) {
+    console.log(query);
+    if (query.length !== 0) {
+      BooksAPI.search(query, 10).then((books) => {
+        if (books.length > 0 ) {
           books = books.filter((book) => (book.imageLinks))
           books = this.createLibrary(books)
           this.setState(() => {
             return {Books: books}
           })
+        } else {
+          this.setState({Books: []})
         }
       })
     } else {
