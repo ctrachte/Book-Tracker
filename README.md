@@ -1,4 +1,4 @@
-# MyReads Project
+# Book Tracker Project
 
 This is the final assessment project for Udacity's React Fundamentals course. The goal of this project is to create a simple
 react application to track books that a user is reading, has read, or is going to read. The app uses a built-in API to simulate API calls to a books database API.
